@@ -1,0 +1,28 @@
+<ucuMyItsData staType="obu" staId="2023001" dt="2024-05-23T07:47:59.139Z">
+<pos lat="49.008892" lng="8.409431" alt="107.2" posConfMajAx="2.909" posConfMinAx="4.435" posConfElOr="0.0" altConf="34.27"/>
+<rsu>
+<protCommZones/>
+</rsu>
+<obu>
+<obuIts type="cyclist" role="none">
+<dim len="12.5" wid="2.1" lenConf="noTrailerPresent"/>
+<speed value="0.062" conf="8.87" src=""/>
+<heading value="0.0" conf="NaN" src=""/>
+<yawRate value="0.01875" conf="NaN"/>
+<latAcc avail="1" value="-0.0" conf="NaN"/>
+<lngAcc avail="1" value="-0.038320314" conf="NaN"/>
+<vertAcc avail="1" value="9.886641" conf="NaN"/>
+<curVal avail="0" value="0.0" conf="0.0" calcMode="unavailable"/>
+<steerWhAngle avail="0" value="0.0" conf="0.0"/>
+<extLight avail="0" lowBeam="0" highBeam="0" leftTurn="0" rightTurn="0" daytime="0" reverse="0" fog="0" parking="0"/>
+<lanePositionDef used="0" laneNum="-1"/>
+<accControl avail="0" brakeEng="0" gasEng="0" emergBrakeEng="0" collWarnEng="0" accEng="0" cruiseContEng="0" speedLimEng="0"/>
+<perfClass class="unknown"/>
+<cenDsrcZone id="0" lat="0.0" lng="0.0"/>
+</obuIts>
+<obuMy regNumber="" id="2023001">
+<stationary isStat="1" statSince="2024-05-23T07:30:33Z"/>
+</obuMy>
+</obu>
+</ucuMyItsData>
+

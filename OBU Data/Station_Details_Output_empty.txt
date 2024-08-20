@@ -1,0 +1,25 @@
+<ucuItsStationDetails staType="obu" staId="2023002" lastRec="2024-03-27T14:30:46.578Z">
+    <pos lat="0.0" lng="0.0" alt="0.0" posConfMajAx="NaN" posConfMinAx="NaN" posConfElOr="NaN" altConf="NaN"/>
+    <obu>
+        <obuIts type="cyclist" role="none">
+            <dim len="12.5" wid="2.0" lenConf="noTrailerPresent"/>
+            <speed value="0.0" conf="10.0" src=""/>
+            <heading value="0.0" conf="360.0" src=""/>
+            <yawRate value="-0.2" conf="8.0"/>
+            <latAcc avail="1" value="-1.4" conf="NaN"/>
+            <lngAcc avail="1" value="-0.6" conf="NaN"/>
+            <vertAcc avail="1" value="-10.0" conf="NaN"/>
+            <curVal avail="0" value="0.0" conf="0.0" calcMode="unavailable"/>
+            <steerWhAngle avail="0" value="0.0" conf="0.0"/>
+            <extLight avail="1" lowBeam="0" highBeam="0" leftTurn="0" rightTurn="0" daytime="0" reverse="0" fog="0" parking="0"/>
+            <lanePositionDef used="0" laneNum="-1"/>
+            <accControl avail="0" brakeEng="0" gasEng="0" emergBrakeEng="0" collWarnEng="0" accEng="0" cruiseContEng="0" speedLimEng="0"/>
+            <perfClass class="unknown"/>
+            <cenDsrcZone id="0" lat="0.0" lng="0.0"/>
+        </obuIts>
+        <obuMy regNumber="" id="2023002">
+            <stationary isStat="0" statSince="1970-01-01T00:00:00Z"/>
+        </obuMy>
+    </obu>
+    <geonet bytes="" sender=""/>
+</ucuItsStationDetails>
