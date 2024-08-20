@@ -5,7 +5,7 @@ import cam_msg.msg
 # import *         # import all messages from cam_msg
 
 # to be change for xml output of Station_Details
-file_unit = '/workspaces/HIWI_vs_code/ws_1/src/py_pubsub/py_pubsub/ucuMyItsData.xml'
+file_unit = 'py_pubsub/py_pubsub/ucuMyItsData.xml'
 
 # get values from unit and return data in a dictionary
 unit_data = {}
