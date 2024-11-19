@@ -40,6 +40,11 @@ rosbag2video.py [--fps 25] [--rate 1.0] [-o outputfile] [-v] [-s] [-t topic] ros
 --topic (-t) Only the images from topic "topic" are used for the video output.
 ```
 
+Simply run:
+```bash
+python3 rosbag2video.py first_rosbag.bag
+```
+
 ## Output
 The output data can be found in:
 + /your_directory/frame_folders/rosbag_name : for frame_folder
