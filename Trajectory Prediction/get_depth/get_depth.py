@@ -1,7 +1,7 @@
 """
-This code predicts dense depth 
+This code analyzes video frames and generates a depth map for each one.
 
-Code simplified for only single_view input and based on:
+Code is adapted for only single_view input from:
 @article{li2019learning,
   title={Learning the Depths of Moving People by Watching Frozen People},
   author={Li, Zhengqi and Dekel, Tali and Cole, Forrester and Tucker, Richard
