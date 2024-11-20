@@ -1,6 +1,6 @@
 """
-This code calculates the depth value for each pedestrian pose 
-}"""
+This code computes the 3D coordinates of each pedestrian pose on a pixel-by-pixel basis
+"""
 
 import cv2
 import joblib
@@ -10,15 +10,17 @@ import os
 import glob
 
 # Change only frame_folder to process another file
-frame_folder = "2024-08-22-15-16-10_folder"
+frame_folder = "2024-08-22-15-35-05_folder"
 depthImgPath = f'../test_data/depthImg/{frame_folder}/'
 poseDataPath = f'../test_data/poseData/pose/{frame_folder}/'
 savePath = f'../test_data/InitTensor/{frame_folder}/'
 savePath_img = f'../test_data/Tensor_visualization/{frame_folder}'
 
+# Creates output paths if needed
 os.makedirs(savePath, exist_ok=True)
 os.makedirs(savePath_img, exist_ok=True)
 
+# Collecting and sorting files by numbers
 depthImgFilenames = sorted(glob.glob(os.path.join(depthImgPath, "*.png")),
                        key=lambda x: int(os.path.basename(x).split('.')[0].split('_')[-1]))
 PoseDataFilenames = sorted(glob.glob(os.path.join(poseDataPath, "*.pose")),
@@ -56,6 +58,8 @@ for num in range(len(depthImgFilenames)):
     depthImg = depthImg[:, :, 0] 
     depthImg = cv2.normalize(depthImg, None, 0, 250, cv2.NORM_MINMAX)
 
+    # Save a frame as depth visualization with colors
+    # frame number 100 is chosen for pedestrian view (other frames can be empty, at the beginning of the video)
     if num == 100:
         plt.figure(figsize=(8,6))
         plt.imshow(depthImg, cmap='jet')  # Use a colormap for better visual representation
