@@ -9,7 +9,7 @@ TODO
 
 # Test Data Creation
 If you need to extract your video and frames from rosbag files, please refer to the following [tutorial](https://github.com/Ludivine388/Crash-Prediction/tree/main/rosbag%20data%20extractor)
-After extracting the needed data, make sure to store it in `Trajectory Prediction/test_data`
+After extracting the needed data, make sure to store it in `Trajectory Prediction/test_data` \
 ![](images/frame_000114_original.png)
 
 For V2X data, refer to :
@@ -57,21 +57,21 @@ Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/
 Run :
 `python get_depth.py`
 
-Visualization exemple:
+Visualization exemple: \
 ![](images/frame_000114_depth.png)
 
 # 2. Pose Calculation
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_pose) \
 Run: 
 `python get_pose.py`
-Visualization exemple:
+Visualization exemple:  \
 ![](images/frame_000114_pose.png)
 
 # 3. Generate Tensor
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_tensor) \
 Run:
 `python generateTensor_Kalman.py`
-Visualization exemple:
+Visualization exemple: \
 ![](images/frame_000114_tensor.png)
 
 # 4. V2X Data Processing
