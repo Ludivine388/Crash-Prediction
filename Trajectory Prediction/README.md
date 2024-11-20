@@ -55,7 +55,9 @@ FYI : with update-alternatives python3.10 is executed when running python (and n
 # 1. Depth Analysis
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_depth) \
 Run :
-`python get_depth.py`
+`python get_depth.py` \
+
+**-> Output** : n PNG image data, 1280 x 480, 8-bit/color RGB, non-interlaced
 
 Visualization exemple: \
 ![](images/frame_000114_depth.png)
@@ -63,7 +65,12 @@ Visualization exemple: \
 # 2. Pose Calculation
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_pose) \
 Run: 
-`python get_pose.py`
+`python get_pose.py` \
+
+**-> Output** :
++ n data file: each frame file contains binary pose information about detected person (pixel coordinates of detected keypoints)
++ n PNG image data, 640 x 480, 8-bit/color RGB, non-interlaced
+
 Visualization exemple:  \
 ![](images/frame_000114_pose.png)
 
@@ -71,6 +78,11 @@ Visualization exemple:  \
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_tensor) \
 Run:
 `python generateTensor_Kalman.py`
+
+**-> Output** :
++ n data file: each frame file contains information about detected person in 3D system
++ n PNG image data, 640 x 480, 8-bit/color RGB, non-interlaced
+
 Visualization exemple: \
 ![](images/frame_000114_tensor.png)
 
