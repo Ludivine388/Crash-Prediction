@@ -1,7 +1,6 @@
 """
 This code predicts pose value of detected persons in video frames
 This code was simplified and adapted for our test case based on:
-
 @inproceedings{cao2017realtime,
   author = {Zhe Cao and Tomas Simon and Shih-En Wei and Yaser Sheikh},
   booktitle = {CVPR},
@@ -39,18 +38,19 @@ from pose.src.hand import Hand
 body_estimation = Body('pose/model/body_pose_model.pth')
 hand_estimation = Hand('pose/model/hand_pose_model.pth')
 
-frame_folder = "2024-08-22-15-30-56_folder"
+# Data to process
+frame_folder = "2024-08-22-15-35-05_folder"
 video_dir = f'../test_data/{frame_folder}/'
+# Output folders
 savePath_img = f'../test_data/poseData/img/{frame_folder}/'
 savePath_pose = f'../test_data/poseData/pose/{frame_folder}/'
 
-# savePath_pose2 = f'../test_data/poseData/pose2/{frame_folder}/'
-
+# Create output folders if needed
 os.makedirs(savePath_img, exist_ok=True)
 os.makedirs(savePath_pose, exist_ok=True)
-# os.makedirs(savePath_pose2, exist_ok=True)
 
-#Get pixel-wise coordinates of body pose
+# Function
+# Get pixel-wise coordinates of body pose
 def getPose(candidate, subset):
     X = []
     Y = []
@@ -96,7 +96,7 @@ def getPose(candidate, subset):
         Y_ = np.array(Y_, dtype=object)
     return X_,Y_
 
-
+# Main script
 imgnames = sorted(glob.glob(os.path.join(video_dir, "*.png")), key=lambda x: int(os.path.basename(x).split('.')[0].split('_')[-1]))
 total = len(imgnames)
 print(f'=================================== {total} images to process ===================================')
@@ -157,10 +157,10 @@ for num, test_image in enumerate(imgnames):
         data = cv2.resize(data, (640, 480), interpolation=cv2.INTER_NEAREST) 
         DATA.append(data)
     DATA = np.array(DATA)
-    # Save binary pose information 
-    # To check binary as image
+    # To check binary as image (savePath_pose2 needs to be created):
     # image_path = os.path.join(savePath_pose2, f'image_{num}.png')
-    # cv2.imwrite(image_path, data * 255) 
+    # cv2.imwrite(image_path, data * 255)
+    # Save binary pose information 
     joblib.dump(DATA, savePath_pose + "frame_" + str(num).zfill(6) + ".pose")  # Save pose data to file
     print("GeneratePose:{}".format(str(num).zfill(6) + ".pose with size:{}".format(DATA.shape))) 
 print(f'=================================== Process finished ===================================')
