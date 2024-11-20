@@ -20,7 +20,7 @@ Transfer your log files to `Trajectory Prediction/test_data`
 
 All the codes have been run and tested on a docker container created with :
 `FROM nvidia/cuda:12.6.1-base-ubuntu24.04`
-and following driver : \
+and following driver : 
 + NVIDIA GeForce RTX 4060
 
 Install then the followings :
