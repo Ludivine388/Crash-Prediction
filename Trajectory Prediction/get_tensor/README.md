@@ -1,8 +1,8 @@
 
 # Introduction
 Creation of Tensor data and visualization:
-- `generateTensor.py` : This code computes the 3D coordinates of each pedestrian pose on a pixel-coordinates basis.
--  `generateTensor_Kalman.py` : This code computes the 3D coordinates of each pedestrian pose on a pixel-coordinates basis with an integrated Kalman filter for values correction
+- `generateTensor.py` : This code computes the 3D coordinates of each pedestrian from pixel-coordinates keypoints pose and depth values.
+-  `generateTensor_Kalman.py` : This code computes the 3D coordinates of each pedestrian from pixel-coordinates keypoints pose and depth values with an integrated Kalman filter for values correction
 Visualization in video:
 - `viz_tensor.py` : Code creates video from png tensor visualization and saves it as output.mp4 
   
