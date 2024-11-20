@@ -14,7 +14,7 @@ def create_video_from_images(image_folder, output_video_file, frame_rate):
     # Sort images in the correct order
     images.sort()
 
-    # Get the first image to retrieve its size
+    # Retrieve size of the first image
     first_image_path = os.path.join(image_folder, images[0])
     frame = cv2.imread(first_image_path)
     height, width, layers = frame.shape
@@ -33,8 +33,8 @@ def create_video_from_images(image_folder, output_video_file, frame_rate):
 
     print(f"Video saved as {output_video_file}")
 
-image_folder = '../test_data/Tensor_visualization/2024-08-22-15-16-10_folder'  # Folder containing PNG images
-output_video_file = "output_video.mp4"  # Output video file path and name
+image_folder = '../test_data/Tensor_visualization/2024-08-22-15-35-05_folder'  # Folder containing PNG images
+output_video_file = "output_video.mp4"  # Output video file path and name (change name if needed)
 frame_rate = 5  # Frame rate 
 
 # Create the video
