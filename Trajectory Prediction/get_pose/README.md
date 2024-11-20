@@ -17,7 +17,7 @@ python get_pose.py
 
 
 # Output
-The generated depth map for each frame will be saved in:
+The generated pose data and visualization for each frame will be saved in:
 + `../test_data/poseData/img/frame_folder`: for visualization
 + `../test_data/poseData/pose/frame_folder`: for pose data
 
