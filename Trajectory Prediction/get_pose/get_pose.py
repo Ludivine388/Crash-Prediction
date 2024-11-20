@@ -1,5 +1,5 @@
 """
-This code predicts pose value of detected persons in video frames
+This code determines pose value of detected persons in video frames
 This code was simplified and adapted for our test case based on:
 @inproceedings{cao2017realtime,
   author = {Zhe Cao and Tomas Simon and Shih-En Wei and Yaser Sheikh},
@@ -7,14 +7,12 @@ This code was simplified and adapted for our test case based on:
   title = {Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields},
   year = {2017}
 }
-
 @inproceedings{simon2017hand,
   author = {Tomas Simon and Hanbyul Joo and Iain Matthews and Yaser Sheikh},
   booktitle = {CVPR},
   title = {Hand Keypoint Detection in Single Images using Multiview Bootstrapping},
   year = {2017}
 }
-
 @inproceedings{wei2016cpm,
   author = {Shih-En Wei and Varun Ramakrishna and Takeo Kanade and Yaser Sheikh},
   booktitle = {CVPR},
