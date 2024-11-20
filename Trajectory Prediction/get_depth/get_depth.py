@@ -38,7 +38,7 @@ def create_video_list_txt(folder_path, output_file):
                     f.write(full_path + '\n')
 
 
-frame_folder = '2024-08-22-15-12-50_folder'              # Name of folder with all frames
+frame_folder = '2024-08-22-15-35-05_folder'              # Name of folder with all frames
 folder_path = '../test_data/'+frame_folder               # folder should be in test_data
 output_file = '../test_data/'+frame_folder+'_list.txt'   
 create_video_list_txt(folder_path, output_file)          # create list of paths
