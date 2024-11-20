@@ -9,8 +9,12 @@ TODO
 
 # Test Data Creation
 If you need to extract your video and frames from rosbag files, please refer to the following [tutorial](https://github.com/Ludivine388/Crash-Prediction/tree/main/rosbag%20data%20extractor)
-After extracting the needed data, make sure to store it in `/test_data`
+After extracting the needed data, make sure to store it in `Trajectory Prediction/test_data`
+![](images/frame_000114_original.png)
 
+For V2X data, refer to :
+[OBU Data Tutorial](https://github.com/Ludivine388/Crash-Prediction/tree/main/OBU%20Data)
+Transfer your log files to `Trajectory Prediction/test_data`
 
 # Setup 
 
@@ -44,9 +48,32 @@ Finally, you need to install the following packages to run the python scripts :
 + matplotlib
 (pip install <package>)
 
+Clone this repository in your environment and start working on you crash prediction!
+
+FYI : with update-alternatives python3.10 is executed when running python (and not python3) in the following instructions
+
 # 1. Depth Analysis
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_depth) \
 Run :
 `python get_depth.py`
 
-Output exemple:
+Visualization exemple:
+![](images/frame_000114_depth.png)
+
+# 2. Pose Calculation
+Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_pose) \
+Run: 
+`python get_pose.py`
+Visualization exemple:
+![](images/frame_000114_pose.png)
+
+# 3. Generate Tensor
+Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_tensor) \
+Run:
+`python generateTensor_Kalman.py`
+Visualization exemple:
+![](images/frame_000114_tensor.png)
+
+# 4. V2X Data Processing
+
+# 5. Crash Prediction
