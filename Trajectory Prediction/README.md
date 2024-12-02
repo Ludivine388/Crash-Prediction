@@ -1,11 +1,11 @@
 # Introduction
-This repository contains the code developed as part of my Bachelor Thesis. The project focuses on processing:
+This repository contains the code developed as part of my Bachelor's Thesis. The project focuses on processing:
 + video footage captured by an embedded camera mounted on a static ARI robot, providing an egocentric view of the environment
 + Vehicle to Everything (V2X) data sent from an On Board Unit (OBU) mounted on an EBike.
 
 # Methodology
 
-TODO
+Refer to the Bachelor's Thesis.
 
 # Test Data Creation
 If you need to extract your video and frames from rosbag files, please refer to the following [tutorial](https://github.com/Ludivine388/Crash-Prediction/tree/main/rosbag%20data%20extractor)
@@ -52,7 +52,9 @@ Clone this repository in your environment and start working on you crash predict
 
 FYI : with update-alternatives python3.10 is executed when running python (and not python3) in the following instructions
 
-# 1. Depth Analysis
+# 1. V2X Data Processing
+
+# 2. Depth Analysis
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_depth) \
 Run :
 `python get_depth.py` \
@@ -62,7 +64,7 @@ Run :
 Visualization exemple: \
 ![](images/frame_000114_depth.png)
 
-# 2. Pose Calculation
+# 3. Pose Calculation
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_pose) \
 Run: 
 `python get_pose.py` \
@@ -74,7 +76,7 @@ Run:
 Visualization exemple:  \
 ![](images/frame_000114_pose.png)
 
-# 3. Generate Tensor
+# 4. Generate Tensor
 Follow [Instructions](https://github.com/Ludivine388/Crash-Prediction/tree/main/Trajectory%20Prediction/get_tensor) \
 Run:
 `python generateTensor_Kalman.py`
@@ -85,7 +87,5 @@ Run:
 
 Visualization exemple: \
 ![](images/frame_000114_tensor.png)
-
-# 4. V2X Data Processing
 
 # 5. Crash Prediction
