@@ -2,6 +2,14 @@
 This code generates pose value of detected persons in video frames. \
 For additional details, refer to the Github repository : [Pytorch-OpenPose](https://github.com/Hzzone/pytorch-openpose)
 
+# Download the Models
+Download the two models : body_pose_model.pth and hand_pose_model.pth from:
+* [dropbox](https://www.dropbox.com/sh/7xbup2qsn7vvjxo/AABWFksdlgOMXR_r5v3RwKRYa?dl=0)
+* [baiduyun](https://pan.baidu.com/s/1IlkvuSi0ocNckwbnUe7j-g)
+* [google drive](https://drive.google.com/drive/folders/1JsvI4M4ZTg98fmnCZLFM-3TeovnCRElG?usp=sharing)
+
+Download the pytorch models and put them in a directory named `model` in the pose folder.
+
 # Data
 Assuming that all the data is stored in the folder `../test_data/frame_folder`. \
 To specify the folder you want to process, go to line 40 in `get_pose.py` and update the folder name as follows:
