@@ -56,14 +56,14 @@ for num in range(len(depthImgFilenames)):
     height, width = depth_oriImg.shape[:2]
     depthImg = depth_oriImg[:, width // 2:width] 
     depthImg = depthImg[:, :, 0] 
-    depthImg = cv2.normalize(depthImg, None, 0, 250, cv2.NORM_MINMAX)
+    depthImg = cv2.normalize(depthImg, None, 0, 255, cv2.NORM_MINMAX)
 
     # Save a frame as depth visualization with colors
     # frame number 100 is chosen for pedestrian view (other frames can be empty, at the beginning of the video)
     if num == 100:
         plt.figure(figsize=(8,6))
         plt.imshow(depthImg, cmap='jet')  # Use a colormap for better visual representation
-        plt.colorbar(label='Depth Scale (0 to 250)')  # Add color bar for scale
+        plt.colorbar(label='Depth Scale (0 to 255)')  # Add color bar for scale
         plt.title('Depth Image with Scale')
         plt.axis('off')  # Hide axes for better visualization
 
@@ -91,7 +91,7 @@ for num in range(len(depthImgFilenames)):
             # Ensure that U and V stay within expected limits
             if 0 <= u < 640 and 0 <= v < 480:
                 # Store the depth value from the depth image 
-                depth_value = 250 - depthImg[v, u]  # Invert the depth value!!
+                depth_value = 255 - depthImg[v, u]  # Invert the depth value!!
                 # depth_value = depthImg[v, u]
                 depth_values.append(depth_value)
 
@@ -111,7 +111,7 @@ for num in range(len(depthImgFilenames)):
         TENSOR.append([(num, d, u, v) for d, u, v in zip(D_vals, U_vals, V_vals)])
 
     # 3D plot
-    ax_3d.set_xlim(0, 250)  
+    ax_3d.set_xlim(0, 255)  
     ax_3d.set_ylim(0, 640)  
     ax_3d.set_zlim(0, 480)  
     ax_3d.set_xlabel('D (Depth)')
