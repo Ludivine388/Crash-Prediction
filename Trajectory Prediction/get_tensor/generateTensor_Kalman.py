@@ -93,7 +93,7 @@ for num in range(len(depthImgFilenames)):
             # Ensure that U and V stay within expected limits
             if 0 <= u < 640 and 0 <= v < 480:
                 # Store the depth value from the depth image 
-                depth_value = 255 - depthImg[v, u]  # Invert the depth value!!
+                depth_value = depthImg[v, u]
                 depth_values.append(depth_value)
 
         # Calculate average depth 
