@@ -63,7 +63,7 @@ else:
             lat_ped, lng_ped = ped_coordinates[frame_number]
             distance = haversine_formula(lat_veh, lng_veh, lat_ped, lng_ped)
             print(f"Distance: {distance:.2f} m")
-            # CRASH SIMULATION
+
             if distance <= 5.5:
                 print("DANGER: CRASH")
         else:
