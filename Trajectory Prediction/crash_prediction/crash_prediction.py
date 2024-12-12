@@ -12,7 +12,9 @@ veh_coordinates = joblib.load(f"../test_data/veh_gps_per_frame/{frame_folder}/gp
 
 #Set simulation crash to True to forward trajectory of pedestrian in time
 simulation = False
-simulation_time = 5   #seconds
+simulation_time = 5         #seconds
+crash_distance = 1          #meters
+security_distance = 5.5     #meters
 
 # Haversine Formula to calculate the distance between two gps points -> can be used in our test case for flat surface on the road
 def haversine_formula(lat1, lng1, lat2, lng2):
@@ -50,8 +52,8 @@ if simulation:
             print(f"Distance: {distance:.2f} m")
             
             # CRASH SIMULATION
-            if distance <= 1:
-                print("DANGER: CRASH")
+            if distance <= crash_distance:
+                print("DETECTED CRASH")
         else:
             print(f"Frame {frame_name} does not have a matching entry in the dictionary.")
 else:
@@ -64,8 +66,8 @@ else:
             distance = haversine_formula(lat_veh, lng_veh, lat_ped, lng_ped)
             print(f"Distance: {distance:.2f} m")
 
-            if distance <= 5.5:
-                print("DANGER: CRASH")
+            if distance <= security_distance:
+                print("DANGER: POSSIBLE COLLISION AT TIME t")
         else:
             print(f"Frame {frame_name} does not have a matching entry in the dictionary.")
 
