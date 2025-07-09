@@ -1,7 +1,25 @@
 # Introduction
+
 This repository contains the code developed as part of my Bachelor's Thesis. The project focuses on processing:
 + video footage captured by an embedded camera mounted on a static ARI robot, providing an egocentric view of the environment
 + Vehicle to Everything (V2X) data sent from an On Board Unit (OBU) mounted on an EBike.
+
+# Acknowledgements
+
+If you find the code or results useful, please cite the following paper:
+
+```
+@INPROCEEDINGS{11054130,
+  author={Morales, Ludivine and Bied, Manuel and Vinel, Alexey},
+  booktitle={2025 IEEE Vehicular Networking Conference (VNC)}, 
+  title={Towards Multi-Modal Crash Prediction Based on V2X and Visual Information Using a Social Robot}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-4},
+  keywords={Visualization;Pedestrians;Robot kinematics;Social robots;Robot vision systems;Road safety;Trajectory;Vehicle-to-everything;Autonomous vehicles;Accidents;V2X;Vulnerable Road Users;Pedestrians;Collective Perception;Autonomous Vehicles;Crash Prediction;Traffic Robot},
+  doi={10.1109/VNC64509.2025.11054130}}
+```
 
 # Methodology
 
